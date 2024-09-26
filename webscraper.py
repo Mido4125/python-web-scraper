@@ -48,7 +48,8 @@ file_list = [titles, companies, locations, times, skills]
 exported = zip_longest(*file_list)
 
 
-with open("wuzzuf_python_jobs.csv", "w") as file:
+with open("wuzzuf_python_jobs.csv", "w", newline='') as file:
     writer = csv.writer(file)
-    
     writer.writerows(exported)
+
+    print("File succesfully written")
